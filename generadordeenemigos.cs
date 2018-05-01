@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class generadordeenemigos : MonoBehaviour {
@@ -8,6 +7,7 @@ public class generadordeenemigos : MonoBehaviour {
 	public float ancho = 10;
 	public float alto = 5;
 	public float velocidad = 5.0f;
+	public float direccion = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +31,7 @@ public class generadordeenemigos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.position += new Vector3 (direccion * velocidad * Time.deltaTime,0,0);
+		transform.position += new Vector3 (direccion * velocidad * Time.deltaTime,-0,-0);
 	}
 }
